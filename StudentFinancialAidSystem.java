@@ -22,7 +22,7 @@ public class StudentFinancialAidSystem {
             System.out.println("PRESS 6: TO EXIT SYSTEM. ");
             System.out.print("\nENTER YOUR OPTION: ");
             String option = input.nextLine();
-
+            
             if (!option.matches("[1-6]")) {
                 System.out.println("\n\n");
                 System.out.println("Invalid option!! Please enter a number between 1 and 6.");
@@ -67,78 +67,76 @@ public class StudentFinancialAidSystem {
                     System.out.println("ENTER STUDENT NUMBER(TO DELETE): ");
                     String studentCode = input.nextLine().toUpperCase();
                     int i = studentNumber.indexOf(studentCode);
-
+                    
                     if (i == -1) {
                         System.out.println("STUDENT NOT FOUND! CANNOT DELETE INFORMATION");
                     } else {
-                    name.remove(i);
-                    studentNumber.remove(i);
-                    age.remove(i);
-                    majors.remove(i);
-                    gwa.remove(i);
-                    email.remove(i);
-                    address.remove(i);
-                    System.out.println("SUCCESS!! STUDENT INFORMATION DELETED");
-
-                }
-            } else if (option.equals("3")){
-                System.out.println("ENTER STUDENT NUMBER(TO UPDATE): ");
-                String studentCode = input.nextLine().toUpperCase();
-                int i = studentNumber.indexOf(studentCode);  
-                if (i == -1) {
-                    System.out.println("STUDENT NOT FOUND! CANNOT UPDATE INFORMATION");
-                } else {
-        
-                    System.out.println("");
-                    System.out.println("ENTER STUDENT NAME: ");
-                    String newName = input.nextLine().toUpperCase();
-                    name.set(i, newName);
-
-                    System.out.println("ENTER STUDENT NUMBER: ");
-                    String newCode = input.nextLine().toUpperCase();
-                    studentNumber.set(i, newCode);
-
-                    System.out.println("ENTER STUDENT AGE: ");
-                    Integer newAge = input.nextInt();
-                    age.set(i, newAge);
-                    input.nextLine();
-
-                    System.out.println("ENTER STUDENT MAJOR: ");
-                    String newMajor = input.nextLine().toUpperCase();
-                    majors.set(i, newMajor);
-
-                    System.out.println("ENTER STUDENT GWA: ");
-                    Double newGwa = input.nextDouble();
-                    gwa.set(i, newGwa);
-                    input.nextLine();
-
-                    System.out.println("ENTER STUDENT EMAIL ID: ");
-                    String newEmail = input.nextLine().toUpperCase();
-                    email.set(i, newEmail);
-
-                    System.out.println("ENTER STUDENT ADDRESS: ");
-                    String newAddress = input.nextLine();
-                    address.set(i, newAddress);
-
-                    System.out.println("\nSUCCESS!! STUDENT INORMATION UPDATED");
-                }       
-            } else if (option.equals("4")) {
-                System.out.println("ENTER STUDENT NUMBER(TO DISPLAY): ");
-                String studentCode = input.nextLine().toUpperCase();
-                int i = studentNumber.indexOf(studentCode);
-                if (i == -1) {
-                    System.out.println("STUDENT NOT FOUND! CANNOT DISPLAY INFORMATION");
-                } else {
-                    System.out.println("\nNAME: " + name.get(i));
-                    System.out.println("STUDENT NUMBER: " + studentNumber.get(i));
-                    System.out.println("AGE: " + age.get(i));
-                    System.out.println("MAJOR: " + majors.get(i));
-                    System.out.println("GWA: " + gwa.get(i));
-                    System.out.println("EMAIL: " + email.get(i));
-                    System.out.println("ADDRESS: " + address.get(i));
-                    System.out.println("STUDENT INFORMATION PRINTED");
+                        name.remove(i);
+                        studentNumber.remove(i);
+                        age.remove(i);
+                        majors.remove(i);
+                        gwa.remove(i);
+                        email.remove(i);
+                        address.remove(i);
+                        System.out.println("SUCCESS!! STUDENT INFORMATION DELETED");
                     }
-            } else if (option.equals("5")) {
+                } else if (option.equals("3")){
+                    System.out.println("ENTER STUDENT NUMBER(TO UPDATE): ");
+                    String studentCode = input.nextLine().toUpperCase();
+                    int i = studentNumber.indexOf(studentCode);  
+                    if (i == -1) {
+                        System.out.println("STUDENT NOT FOUND! CANNOT UPDATE INFORMATION");
+                    } else {
+                        System.out.println("");
+                        System.out.println("ENTER STUDENT NAME: ");
+                        String newName = input.nextLine().toUpperCase();
+                        name.set(i, newName);
+
+                        System.out.println("ENTER STUDENT NUMBER: ");
+                        String newCode = input.nextLine().toUpperCase();
+                        studentNumber.set(i, newCode);
+
+                        System.out.println("ENTER STUDENT AGE: ");
+                        Integer newAge = input.nextInt();
+                        age.set(i, newAge);
+                        input.nextLine();
+
+                        System.out.println("ENTER STUDENT MAJOR: ");
+                        String newMajor = input.nextLine().toUpperCase();
+                        majors.set(i, newMajor);
+
+                        System.out.println("ENTER STUDENT GWA: ");
+                        Double newGwa = input.nextDouble();
+                        gwa.set(i, newGwa);
+                        input.nextLine();
+
+                        System.out.println("ENTER STUDENT EMAIL ID: ");
+                        String newEmail = input.nextLine().toUpperCase();
+                        email.set(i, newEmail);
+
+                        System.out.println("ENTER STUDENT ADDRESS: ");
+                        String newAddress = input.nextLine();
+                        address.set(i, newAddress);
+
+                        System.out.println("\nSUCCESS!! STUDENT INORMATION UPDATED");
+                    }       
+                } else if (option.equals("4")) {
+                    System.out.println("ENTER STUDENT NUMBER(TO DISPLAY): ");
+                    String studentCode = input.nextLine().toUpperCase();
+                    int i = studentNumber.indexOf(studentCode);
+                    if (i == -1) {
+                        System.out.println("STUDENT NOT FOUND! CANNOT DISPLAY INFORMATION");
+                    } else {
+                        System.out.println("\nNAME: " + name.get(i));
+                        System.out.println("STUDENT NUMBER: " + studentNumber.get(i));
+                        System.out.println("AGE: " + age.get(i));
+                        System.out.println("MAJOR: " + majors.get(i));
+                        System.out.println("GWA: " + gwa.get(i));
+                        System.out.println("EMAIL: " + email.get(i));
+                        System.out.println("ADDRESS: " + address.get(i));
+                        System.out.println("STUDENT INFORMATION PRINTED");
+                    }
+                } else if (option.equals("5")) {
                     System.out.println("ENTER STUDENT NUMBER(TO APPLY): ");
                     String studentCode = input.nextLine().toUpperCase();
                     int i = studentNumber.indexOf(studentCode);
@@ -152,36 +150,49 @@ public class StudentFinancialAidSystem {
                         String studentMajor = majors.get(i).toUpperCase();
                         System.out.println("MAJOR: " + majors.get(i));
                         String formatMajor = studentMajor.replaceAll("\\s|-", "").toUpperCase();
-                    
-                        if (studentGwa <= 84) {
-                            System.out.println("\n YOUR GRADES DOESN'T MEET THE REQUIREMENTS. YOU CANNOT APPLY FOR CSHOLARSHIP.");
-                        } else if (studentGwa >= 85) {
-                            System.out.println("CONGRATULATIONS! YOU ARE ELIGIBLE TO ENROLL");
-
-                            if (formatMajor.equals("BS ECE")) {
-                                System.out.println("SCHOLARSHIP: CSS-A Fastech Synergy Philippines >> 100% discount on tuition fees");
-                            } else if (formatMajor.equals("BS ENTREP")) {
-                                System.out.println("SCHOLARSHIP: CSS-B AFREIGHT Philippines Inc. >> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees");
-                            } else if (formatMajor.equals("BEEd") || formatMajor.equals("BSE-Eng") || formatMajor.equals("BSE-Math")) {
-                                System.out.println("SCHOLARSHIP: CSS-B Diwa Learning Systems Inc. >> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees");
-                            } else if (formatMajor.equals("BEEd") || formatMajor.equals("BSE-Eng") || formatMajor.equals("BSE-Math") || formatMajor.equals("BPE-Spe")) {
-                                System.out.println("SCHOLARSHIP: CSS-C Spouses Saturnino and Segundina Belen >> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees");
-                                System.out.println("SCHOLARSHIP: CSS-C Spouses Lope and Flaviana Leonio >> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees");
-                                System.out.println("SCHOLARSHIP: Amada Gomez >> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees");
-                                System.out.println("SCHOLARSHIP: Francisco Esteban >> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees");
-                            } else if (formatMajor.equals("BS IT") || formatMajor.equals("BSCS") || formatMajor.equals("BS EMC") || formatMajor.equals("BS EE") || formatMajor.equals("BS IE") || formatMajor.equals("BS CPE") || formatMajor.equals("BS MT")) {
-                                System.out.println("SCHOLARSHIP: CSS-D FAITH Colleges >> 100% discount on tuition fees");
-                            } else {
-                                System.out.println("STUDENT MAJOR DOES NOT MATCH ANY ELIGIBLE SCHOLARSHIPS");
+                
+                        Map<String, List<String>> scholarships = new HashMap<>();
+                        scholarships.put("BS ECE", Collections.singletonList("SCHOLARSHIP: CSS-A Fastech Synergy Philippines \n>> 100% discount on tuition fees"));
+                        scholarships.put("BS ENTREP", Collections.singletonList("SCHOLARSHIP: CSS-B AFREIGHT Philippines Inc. \n>> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees"));
+                        scholarships.put("BEED", Arrays.asList(
+                            "SCHOLARSHIP: CSS-B Diwa Learning Systems Inc. \n>> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees",
+                            "SCHOLARSHIP: CSS-C Spouses Saturnino and Segundina Belen \n>> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees",
+                            "SCHOLARSHIP: CSS-C Spouses Lope and Flaviana Leonio \n>> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees",
+                            "SCHOLARSHIP: Amada Gomez \n>> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees",
+                            "SCHOLARSHIP: Francisco Esteban \n>> 100% discount on tuition fees, 100% discount on registration and miscellaneous fees"
+                            ));
+                            
+                            if (studentGwa <= 84) {
+                                System.out.println("\nYOUR GRADES DON'T MEET THE REQUIREMENTS. YOU CANNOT APPLY FOR SCHOLARSHIP.");
+                            } else if (studentGwa >= 85) {
+                                if (scholarships.containsKey(formatMajor)) {
+                                    System.out.println("CONGRATULATIONS! YOU ARE ELIGIBLE TO ENROLL");List<String> availableScholarships = scholarships.get(formatMajor);
+                                    
+                                    // Display available scholarships
+                                    for (int j = 0; j < availableScholarships.size(); j++) {
+                                        System.out.println((j + 1) + ". " + availableScholarships.get(j));
+                                    }
+                                    // Choose scholarship
+                                    System.out.println("Choose a scholarship (1-" + availableScholarships.size() + "): ");
+                                    int choice = input.nextInt();
+                                    
+                                    // Validate user choice and proceed accordingly
+                                    if (choice >= 1 && choice <= availableScholarships.size()) {
+                                        System.out.println("You chose: " + availableScholarships.get(choice - 1));
+                                    } else {
+                                        System.out.println("Invalid choice.");
+                                    }
+                                } else {
+                                    System.out.println("STUDENT MAJOR DOES NOT MATCH ANY ELIGIBLE SCHOLARSHIPS");
+                                }
                             }
                         }
-                    }   
                 } if (option.equals("6")){
-                    System.out.println("THANK YOU. HAVE A GREAT DAY!");
-                    break;
-                } 
+                        System.out.println("THANK YOU. HAVE A GREAT DAY!");
+                        break;
+                    } 
+                }
             }
-        }
-        input.close();
+        input.close();    
     } 
 }
